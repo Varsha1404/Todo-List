@@ -66,11 +66,9 @@
     outline: none;
     transition: background 0.2s ease-in-out;
   }
-  
   .btn:hover {
     background: linear-gradient(to bottom, #0056b3, #007bff);
   }
-  
   .btn.btn-danger:hover {
     background: linear-gradient(to bottom, #ff0052, #ff3d71);
   }
@@ -112,19 +110,6 @@
     color: hsl(203, 86%, 14%);
     font-weight: bolder;
   }
-  
-  .list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-  
-  .list li {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  
   .list li label {
     display: flex;
     gap: 0.25rem;
