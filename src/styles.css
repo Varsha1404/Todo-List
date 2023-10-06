@@ -1,0 +1,211 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+
+  html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #202020, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #211f1f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,130,159,1) 0%, rgba(103,56,96,1) 90% ); */
+    
+    /* background: #333; */
+    color: hsl(200, 100%, 90%);
+    max-width: 400px;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  
+  .new-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+
+  .new-item-form input:focus {
+    border: 1px solid hsl(200, 71%, 81%);
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-row label {
+    font-weight: bold;
+  }
+  
+  .form-row input {
+    padding: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .btn {
+    
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s ease-in-out;
+  }
+
+  
+  .btn.btn-danger {
+    background: linear-gradient(to bottom, #ff3d71, #ff0052);
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(to bottom, #0056b3, #007bff);
+  }
+  
+  .btn.btn-danger:hover {
+    background: linear-gradient(to bottom, #ff0052, #ff3d71);
+  }
+  
+  
+  /* .btn {
+    background: hsl(200, 100%, 50%, 0.1);
+    border: 1px solid hsl(200, 100%, 50%);
+    color: hsl(200, 100%, 50%);
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .btn:hover,
+  .btn:focus-visible {
+    background: hsl(200, 100%, 50%, 0.2);
+  }
+  
+  .btn.btn-danger {
+    background: hsl(0, 100%, 40%, 0.1);
+    border: 1px solid hsl(0, 100%, 40%);
+    color: hsl(0, 100%, 40%);
+  }
+  
+  .btn.btn-danger:hover,
+  .btn.btn-danger:focus-visible {
+    background: hsl(0, 100%, 40%, 0.2);
+  } */
+  
+  .header {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .list li {
+    background-color: #255cdf;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .list li.completed {
+    background-color: #f2f2f28a;
+  }
+  
+  .list li:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  
+  .list {
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem;
+    list-style: none;
+  }
+  
+  .list li:has(input:checked) label {
+    color: hsl(203, 86%, 14%);
+    font-weight: bolder;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .list li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .list li label {
+    display: flex;
+    gap: 0.25rem;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .list li:has(input:focus-visible) label {
+    outline: 1px solid hsl(200, 100%, 50%);
+  }
+  
+  .list li input {
+    outline: none;
+    width: 0;
+    height: 0;
+    appearance: none;
+    pointer-events: none;
+    position: absolute;
+  }
+  
+  .list li label::before {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: hsl(200, 90%, 80%);
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .list li label:hover::before {
+    background: hsl(200, 100%, 80%);
+  }
+  
+  .list li:has(input:checked) label::before {
+    content: "✔";
+    background: hsl(200, 80%, 49%);
+    color: hsl(200, 97%, 87%);
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  
+  .list li:has(input:checked) label:hover::before {
+    background: hsl(200, 100%, 30%);
+  }
